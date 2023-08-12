@@ -168,7 +168,7 @@ const getCredentials = () => {
     email: document.querySelector('[name="email"]').value,
     password: document.querySelector('[name="password"]').value
   }
-
+console.log(user)
   return user
 }
 

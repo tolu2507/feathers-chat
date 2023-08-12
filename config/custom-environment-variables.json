@@ -6,5 +6,20 @@
   "host": "HOSTNAME",
   "authentication": {
     "secret": "FEATHERS_SECRET"
-  }
+  },
+  "mongodb":"DATABASE_URL",
+  "oauth": {
+      "google": {
+        "key": "GOOGLE_KEY",
+        "secret": "GOOGLE_SECRET"
+      },
+      "github": {
+        "key": "GITHUB_KEY",
+        "secret": "GITHUB_SECRET"
+      },
+      "auth0": {
+        "key": "<Client ID>",
+        "secret": "<Client secret>"
+      }
+    }
 }

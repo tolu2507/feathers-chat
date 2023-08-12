@@ -1,5 +1,7 @@
 import { app } from './app'
 import { logger } from './logger'
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 const port = app.get('port')
 const host = app.get('host')

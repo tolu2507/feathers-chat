@@ -26,6 +26,20 @@ class GitHubStrategy extends OAuthStrategy {
   }
 }
 
+class GoogleStrategy extends OAuthStrategy {
+  async getEntityData(profile: OAuthProfile, existing: any, params: Params) {
+    // this will set 'googleId'
+    const baseData = await super.getEntityData(profile, existing, params)
+
+    // this will grab the picture and email address of the Google profile
+    return {
+      ...baseData,
+      profilePicture: profile.picture,
+      email: profile.email
+    }
+  }
+}
+
 export const authentication = (app: Application) => {
   const authentication = new AuthenticationService(app)
 
@@ -33,6 +47,7 @@ export const authentication = (app: Application) => {
   authentication.register('local', new LocalStrategy())
   authentication.register('google', new OAuthStrategy())
   authentication.register('github', new GitHubStrategy())
+  authentication.register('google', new GoogleStrategy())
   authentication.register('auth0', new OAuthStrategy())
 
   app.use('authentication', authentication)

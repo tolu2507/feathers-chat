@@ -33,11 +33,13 @@
     "oauth": {
       "google": {
         "key": "<Client ID>",
-        "secret": "<Client secret>"
+        "secret": "<Client secret>",
+        "scope": ["openid", "email"],
+        "nonce": true
       },
       "github": {
-        "key": "a4534f5f79071318b11c",
-        "secret": "891cb681f77819639e44ec24ccbc08b743a32cf5"
+        "key": "<Client ID>",
+        "secret": "<Client secret>"
       },
       "auth0": {
         "key": "<Client ID>",

@@ -12,6 +12,7 @@ import { authentication } from './authentication'
 import { services } from './services/index'
 import { channels } from './channels'
 
+
 const app: Application = koa(feathers())
 
 // Load our app configuration (see config/ folder)
